@@ -1,0 +1,17 @@
+pl\runnerData\runner\repository\RunnerRepository.class
+pl\runnerData\initialize\DataInitializator.class
+pl\runnerData\runner\entity\Runner$RunnerBuilderImpl.class
+pl\runnerData\runner\entity\Runner.class
+pl\runnerData\shoe\entity\Shoe$ShoeBuilderImpl.class
+pl\runnerData\shoe\service\DefaultShoeService.class
+pl\runnerData\function\CommandRunner.class
+pl\runnerData\function\RandomBirthdateGenerator.class
+pl\runnerData\shoe\repository\ShoeRepository.class
+pl\runnerData\shoe\dto\ShoeDTO$ShoeDTOBuilder.class
+pl\runnerData\shoe\dto\ShoeDTO.class
+pl\runnerData\runner\service\DefaultRunnerService.class
+pl\runnerData\shoe\entity\Shoe$ShoeBuilder.class
+pl\runnerData\RunnerApplication.class
+pl\runnerData\runner\entity\Runner$RunnerBuilder.class
+pl\runnerData\shoe\dto\ShoeDTO$ShoeDTOBuilderImpl.class
+pl\runnerData\shoe\entity\Shoe.class

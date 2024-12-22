@@ -1,0 +1,26 @@
+1. All business classes should be enhanced with appropriate JPA annotations. Name
+of the tables should be in plural form. Tables and columns names should be
+formatted using snake_case. All relationships should be bidirectional. Fetching
+category should not fetch elements by default. Entities should use UUID generated
+by client (not by the JPA or database) as primary keys. Remember about data
+source configuration. The in-memory H2 database should be used.
+
+2. Implementation of JPA repositories for each business class as Spring
+@Repository. Repository for elements should allow for querying them by
+category.
+
+3. Implementation of service for each business class as Spring @Service. Each
+service should utilize repository instance provided by the container. At this moment
+each service should delegate repository methods. At this point this can look as
+services does not introduce any added value but this decomposition can be crucial
+in developing much more complex applications.
+
+4. Implementation of example data initializer launched automatically after start as
+Spring @Component. The initializer should utilize services instances provided by
+the container.
+
+5. Implementation of command line runner as Spring @Component. The runner should
+communicate with the user using standard input and output streams and allow for
+listing available commands, listing all categories, listing all elements, adding new
+element (with category selection), delete existing element, stopping the application.
+The runner should utilize services instances provided by the container.
