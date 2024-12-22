@@ -1,0 +1,30 @@
+1. Implementation of entity classes with appropriate comparison mechanisms (based
+on both hash and natural ordering) and text representation. Be careful about
+circuital dependencies. For element class additional implement DTO class with
+original fields but instead whole category use only one category field (the one best
+identifying it). For object creation builder pattern should be used. When some task
+requires to print object, the text representation should be used.
+
+2. At the application start-up, collection of categories filled with elements (remember
+about two way relationships) should be created. At this moment there is no need for
+user interaction. Objects should be created in code using appropriate creation
+methods. Then using nested for each lambda print all categories and elements in
+original order.
+
+3. Using single Stream API pipeline create Set collection all elements (from all
+categories). Then using second pipeline print it.
+
+4. Using single Stream API pipeline filter elements collection created earlier (by one
+selected property), then sort it (by one different property) and print it. (1 point)
+5. Using single Stream API pipeline transform elements collection created earlier into
+steam of DTO objects, then sort them using natural order and collect them into
+List collection. Then using second pipeline print it.
+
+6. Using serialization mechanism store collection of categories in the binary file, then
+read it from it and print call categories with elements.
+
+7. Using Stream API parallel pipelines with custom thread pool execute some task on
+each category. For example task can be printing each collection elements with
+intervals using Thread.sleep() to simulate workload. Observer result with
+different custom pool sizes. For thread pool use ForkJoinPool Remember about
+closing the thread pool.
