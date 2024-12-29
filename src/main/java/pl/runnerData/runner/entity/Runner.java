@@ -28,6 +28,7 @@ public class Runner implements Serializable {
     @Setter(AccessLevel.PUBLIC)
     private List<Shoe> shoes;
 
+
     public String getPID(){
         return id.toString() + " " + name + " " + surname;
     }

@@ -19,7 +19,6 @@ public class CommandRunner implements CommandLineRunner {
     private final DefaultRunnerService defaultRunnerService;
     private final DefaultShoeService defaultShoeService;
 
-
     @Autowired
     public CommandRunner(DefaultRunnerService defaultRunnerService, DefaultShoeService defaultShoeService) {
         this.defaultRunnerService = defaultRunnerService;
@@ -85,6 +84,7 @@ public class CommandRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args){
+
         boolean end = false;
         Scanner scanner = new Scanner(System.in);
         System.out.println(startMessage);
@@ -93,6 +93,7 @@ public class CommandRunner implements CommandLineRunner {
             switch (command) {
                 case "stop":
                     end = true;
+                    break;
                 case "list_r":
                     listRunners();
                     System.out.println(startMessage);

@@ -7,4 +7,5 @@ import pl.runnerData.runner.entity.Runner;
 import java.util.UUID;
 
 @Repository
-public interface RunnerRepository extends JpaRepository<Runner, UUID> { }
+public interface RunnerRepository extends JpaRepository<Runner, UUID> {}
+

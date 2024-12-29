@@ -13,7 +13,6 @@ import java.util.UUID;
 public class DefaultShoeService {
     private final ShoeRepository shoeRepository;
 
-
     @Autowired
     public DefaultShoeService(ShoeRepository shoeRepository) {
         this.shoeRepository = shoeRepository;
@@ -26,6 +25,7 @@ public class DefaultShoeService {
 
     public Optional<Shoe> findById(UUID id){
         return shoeRepository.findById(id);
+
     }
 
     public void create(Shoe shoe) {

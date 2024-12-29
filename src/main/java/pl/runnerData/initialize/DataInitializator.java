@@ -12,6 +12,7 @@ import pl.runnerData.shoe.service.DefaultShoeService;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+
 import java.util.concurrent.ThreadLocalRandom;
 
 
@@ -87,7 +88,6 @@ public class DataInitializator{
             "cc0b0577-bb6f-45b7-81d6-3db88e6ac27f"
     );
 
-
     public static void dataInitializator(List<Object> container, List<Object> shoeList,
                                           DefaultRunnerService defaultRunnerService,
                                           DefaultShoeService defaultShoeService) {
@@ -118,5 +118,3 @@ public class DataInitializator{
         }
     }
 
-
-}

@@ -6,6 +6,7 @@ import pl.runnerData.runner.entity.Runner;
 import pl.runnerData.runner.repository.RunnerRepository;
 import pl.runnerData.shoe.entity.Shoe;
 
+
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -16,6 +17,7 @@ public class DefaultRunnerService {
 
     @Autowired
     public DefaultRunnerService(RunnerRepository runnerRepository) {
+
         this.runnerRepository = runnerRepository;
     }
     public List<Runner> findAll(){
@@ -29,6 +31,7 @@ public class DefaultRunnerService {
     public List<Shoe> findRunnerShoes(UUID id){
         return runnerRepository.findById(id).get().getShoes();
     }
+
 
     public void create(Runner runner){
         runnerRepository.save(runner);
