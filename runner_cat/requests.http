@@ -1,0 +1,28 @@
+@shoe_id = cc0b0577-bb6f-45b7-81d6-3db88e6ac20f
+@runner_id = 81e1c2a9-7f57-439b-b53d-6db88b071e4e
+@new_runner =  00000000-0000-0000-0000-000000000000
+
+### Get all runners
+GET http://localhost:8082/api/runners
+
+### Get single runner
+GET  http://localhost:8082/api/runners/{{runner_id}}
+
+### Get non existing runner
+GET http://localhost:8082/api/runners/{{shoe_id}}
+
+### Delete non existant runner
+DELETE http://localhost:8082/api/runners/{{shoe_id}}
+
+### Create runner
+PUT http://localhost:8082/api/runners/{{new_runner}}
+Content-Type: application/json
+
+{
+"name": "Test",
+"surname": "Testowy",
+"birthDate": "2002-02-22"
+}
+
+### Delete single runner
+DELETE http://localhost:8082/api/runners/{{new_runner}}
