@@ -1,0 +1,58 @@
+@shoe_id = cc0b0577-bb6f-45b7-81d6-3db88e6ac20f
+@runner_id = 81e1c2a9-7f57-439b-b53d-6db88b071e4e
+@new_runner =  00000000-0000-0000-0000-000000000000
+
+### Get all runners
+GET http://localhost:8081/api/runners
+
+### Get single runner
+GET  http://localhost:8081/api/runners/{{runner_id}}
+
+### Get non existing runner
+GET http://localhost:8081/api/runners/{{shoe_id}}
+
+### Get all shoes
+GET http://localhost:8081/api/shoes
+
+### Get one shoe
+GET http://localhost:8081/api/shoes/{{shoe_id}}
+
+### Get non existing shoe
+GET http://localhost:8081/api/shoes/{{runner_id}}
+
+### Get one runner's shoes
+GET http://localhost:8081/api/runners/{{runner_id}}/shoes
+
+### Delete single runner
+DELETE http://localhost:8081/api/runners/{{runner_id}}
+
+### Delete non existant runner
+DELETE http://localhost:8081/api/runners/{{shoe_id}}
+
+### Delete single shoe
+DELETE http://localhost:8081/api/shoes/{{shoe_id}}
+
+### Delete non existant shoe
+DELETE http://localhost:8081/api/shoes/{{runner_id}}
+
+### Create runner
+PUT http://localhost:8081/api/runners/{{runner_id}}
+Content-Type: application/json
+
+{
+"name": "Test",
+"surname": "Testowy",
+"birthDate": "2002-02-22"
+}
+
+### Create shoe
+PUT http://localhost:8081/api/runners/{{runner_id}}/shoes/
+Content-Type: application/json
+
+{
+  "brandName": "Nike",
+  "model": "TEST",
+  "color": "Black",
+  "size": 46.5
+}
+
