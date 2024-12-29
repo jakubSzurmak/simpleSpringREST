@@ -18,7 +18,7 @@ import java.util.UUID;
 public class CommandRunner implements CommandLineRunner {
     private final DefaultRunnerService defaultRunnerService;
     private final DefaultShoeService defaultShoeService;
-    private boolean end = false;
+
 
     @Autowired
     public CommandRunner(DefaultRunnerService defaultRunnerService, DefaultShoeService defaultShoeService) {
@@ -85,6 +85,7 @@ public class CommandRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args){
+        boolean end = false;
         Scanner scanner = new Scanner(System.in);
         System.out.println(startMessage);
         while (!end) {
@@ -92,8 +93,6 @@ public class CommandRunner implements CommandLineRunner {
             switch (command) {
                 case "stop":
                     end = true;
-                    System.exit(0);
-                    break;
                 case "list_r":
                     listRunners();
                     System.out.println(startMessage);
