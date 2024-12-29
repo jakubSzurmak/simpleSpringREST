@@ -1,6 +1,5 @@
 package pl.runnerData.initialize;
 
-
 import org.springframework.stereotype.Component;
 import pl.runnerData.function.RandomBirthdateGenerator;
 import pl.runnerData.runner.entity.Runner;
@@ -9,7 +8,11 @@ import pl.runnerData.shoe.entity.Shoe;
 import lombok.Getter;
 import pl.runnerData.shoe.service.DefaultShoeService;
 
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+
 import java.util.concurrent.ThreadLocalRandom;
 
 
@@ -114,24 +117,4 @@ public class DataInitializator{
             (x).setShoes(box);
         }
     }
-    /*
-    public Set<Object> gatherAllDistinctShoes() {
-        return Stream.of(this.getShoeList()).collect(Collectors.toSet());
-    }
 
-    public void printAllShoes(Collection<Object> collection){
-        collection.forEach(System.out::println);
-    }
-
-    public static void runParallel(Collection<Object> collection, String name){
-        collection.parallelStream().forEach(o ->{
-            try {
-                System.out.println(Thread.currentThread().getName()+" Category: " + name + "\nElement: " + o);
-                Thread.sleep(1250);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-            }
-        });
-    }
-     */
-}

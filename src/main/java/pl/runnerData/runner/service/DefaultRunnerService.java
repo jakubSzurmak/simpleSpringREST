@@ -4,7 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.runnerData.runner.entity.Runner;
 import pl.runnerData.runner.repository.RunnerRepository;
-import pl.runnerData.shoe.repository.ShoeRepository;
+import pl.runnerData.shoe.entity.Shoe;
+
 
 import java.util.List;
 import java.util.Optional;
@@ -12,12 +13,11 @@ import java.util.UUID;
 
 @Service
 public class DefaultRunnerService {
-    private final ShoeRepository shoeRepository;
     private final RunnerRepository runnerRepository;
 
     @Autowired
-    public DefaultRunnerService(ShoeRepository shoeRepository, RunnerRepository runnerRepository) {
-        this.shoeRepository = shoeRepository;
+    public DefaultRunnerService(RunnerRepository runnerRepository) {
+
         this.runnerRepository = runnerRepository;
     }
     public List<Runner> findAll(){
@@ -27,6 +27,11 @@ public class DefaultRunnerService {
     public Optional<Runner> findById(UUID id){
         return runnerRepository.findById(id);
     }
+
+    public List<Shoe> findRunnerShoes(UUID id){
+        return runnerRepository.findById(id).get().getShoes();
+    }
+
 
     public void create(Runner runner){
         runnerRepository.save(runner);

@@ -49,6 +49,6 @@ public class Shoe implements Serializable {
 
     @Override
     public String toString(){
-        return brandName + " " + model + " " + color + " " + df.format(size) + "\n" + owner.getPID();
+        return shoe_id + " " + model + " " + color + " " + df.format(size) + "\n" + owner.getPID();
     }
 }
